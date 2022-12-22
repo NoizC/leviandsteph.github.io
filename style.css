@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+
+@keyframes fadeInTop {
+    0%{
+        transform: translateY(-50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+:before,:after{
+    box-sizing: border-box;
+}
+img{
+    max-width: 100%;
+    vertical-align: middle;
+}
+header,section,footer{
+    display: block;
+    width: 100%;
+}
+
+body{
+    margin: 0;
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+.logo{
+    position: fixed;
+    left: 10;
+    top: 10;
+    z-index: 2;
+    margin:auto;
+    padding: 0 15px;
+    border: inset;
+    border-radius: 2px;
+    visibility: hidden;
+    /* border-bottom: 1px solid rgba(255,255,255,0.1); */
+}
+.logo a{
+    font-size: 20px;
+    color: rgb(150, 132, 242);
+    font-family: 'Yellowtail', cursive;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+/* Home Section Styling */
+.homesection{
+    min-height: 100vh;
+    background-color: gray;
+    align-items: center;
+    position: relative;
+}
+
+.homesection .slide{
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.7s ease-in-out;
+}
+
+.homesection .slide.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+.homesection .slide:before{
+    content: '';
+    position:absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    z-index: -1;
+}
+
+.homesection .slide.active .content p{
+    opacity: 0;
+    animation: fadeInTop 1s ease forwards;
+    animation-delay: 0.5s;
+}
+
+.homesection .slide.active .content h1{
+    opacity: 0;
+    animation: fadeInTop 1s ease forwards;
+    animation-delay: 1.5s;
+}
+
+.homesection .slide.active .content span{
+    opacity: 0;
+    animation: fadeInTop 1s ease forwards;
+    animation-delay: 2.5s;
+}
+
+.homesection .row{
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.homesection .content {
+    flex: 0 0 100%;
+    padding: 0 15px;
+    text-align: center;
+}
+
+.homesection .content p{
+    font-size: 30px;
+    color: white;
+    margin: 0 0 15px;
+}
+
+.homesection .content h1{
+    font-size: 100px;
+    color: white;
+    margin: 0;
+    font-weight: normal;
+    letter-spacing: 10px;
+    font-family: 'Yellowtail', cursive;
+}
+
+.homesection .content span{
+    font-size: 30px;
+    display: inline-block;
+    color: white;
+    padding: 7px 30px;
+    margin: 15px 0 0;
+}
+/* ----------------------------------- */
+
+/* Timeline Section Styling */
+
+.row {
+    display: flex;
+    height: 100%;
+}
+
+.lcol {
+    flex-basis: 50%;
+}
+
+.rcol {
+    flex-basis: 50%;
+}
+/* ----------------------------------- */
